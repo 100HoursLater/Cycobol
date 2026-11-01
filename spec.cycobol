@@ -147,3 +147,18 @@ FOR(INTEGER i ASSIGN 1; i LESS-THAN-EQUALS 100; i-PLUS-PLUS) {
         IO.PRINT(i);
     };
 }; 
+
+// error handling
+THROW ERRNO // basic error throw
+
+TRY {
+    CATCH {
+
+    };
+}; 
+
+ON SIZE[/*procedure or variable here*/] ERR {
+
+};
+
+RETURN -1; // Exit with failure
