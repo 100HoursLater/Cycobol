@@ -38,6 +38,8 @@ MODULO // %
 ASSIGN // =
 COMPARE // ==
 
+NEGATE // !
+
 // IoCyc // Internet of Cycobol 
 
 PROGRAM // Program entry point 
@@ -162,3 +164,14 @@ ON SIZE[/*procedure or variable here*/] ERR {
 };
 
 RETURN -1; // Exit with failure
+
+// using if statements for errors
+
+FLOAT account_balance ASSIGN 100.0;
+FLOAT max_account_balance ASSIGN 100000.0;
+
+IF (account_balance MORE-THAN max_account_balance {
+   THROW ERRNO; 
+   IO.ERR("too much monies!");
+   account_balance ASSIGN 100000.0;
+};
