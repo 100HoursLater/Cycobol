@@ -217,3 +217,7 @@ PROGRAM -BANK {
 
   RETURN 0;
 };
+
+// Cycobol uses IBM 370 floating point format, if you don't like that do:
+CALL <IEEE_FLOAT> FROM <STD>
+
