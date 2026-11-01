@@ -55,9 +55,9 @@ INTEGER // 16 Bit integer
 
 L-INTEGER // 32 Bit intger 
 
-FLOAT // 32 bit float 
+FLOAT // 32 bit float, COMP-1
 
-DOUBLE // 64 bit float 
+DOUBLE // 64 bit float, COMP-2
 
 CHAR // character 
 
@@ -69,9 +69,9 @@ INTEGER my_arr[4] ASSIGN {1,2,3,4}; // array of 16 bit integers
 
 L-INTEGER my_l_arr[4] ASSIGN {1,2,3,4}; // array of 32 bit integers
 
-FLOAT my_f_arr[4] ASSIGN {1.0,2.0,3.0,4.0}; // array of 32bit floats
+FLOAT my_f_arr[4] ASSIGN {1.0,2.0,3.0,4.0}; // array of 32bit floats, COMP-1
 
-DOUBLE my_d_arr[4] ASSIGN {1.00,2.00,3.00,4.00}; // array of 64bit floats
+DOUBLE my_d_arr[4] ASSIGN {1.00,2.00,3.00,4.00}; // array of 64bit floats, COMP-2
 
 CHAR my_c_arr[4] ASSIGN {'a','b','c','d'}; // array of char's 
 
@@ -84,9 +84,9 @@ CONSTANT INTEGER // 16 Bit integer, immutable
 
 CONSTANT L-INTEGER // 32 Bit intger, immutable
 
-CONSTANT FLOAT // 32 bit float, immutable
+CONSTANT FLOAT // 32 bit float, immutable, COMP-1
 
-CONSTANT DOUBLE // 64 bit float, immutable
+CONSTANT DOUBLE // 64 bit float, immutable, COMP-2
 
 CONSTANT CHAR // character, immutable
 
@@ -98,9 +98,9 @@ CONSTANT INTEGER my_i_arr[4] ASSIGN {1,2,3,4}; // array of 16 bit integers, immu
 
 CONSTANT L-INTEGER my_i_l_arr[4] ASSIGN {1,2,3,4}; // array of 32 bit integers, immutable
 
-CONSTANT FLOAT my_i_f_arr[4] ASSIGN {1.0,2.0,3.0,4.0}; // array of 32bit floats, immutable
+CONSTANT FLOAT my_i_f_arr[4] ASSIGN {1.0,2.0,3.0,4.0}; // array of 32bit floats, immutable, COMP-1
 
-CONSTANT DOUBLE my_i_d_arr[4] ASSIGN {1.00,2.00,3.00,4.00}; // array of 64bit floats, immutable
+CONSTANT DOUBLE my_i_d_arr[4] ASSIGN {1.00,2.00,3.00,4.00}; // array of 64bit floats, immutable, COMP-2
 
 CONSTANT CHAR my_c_arr[4] ASSIGN {'a','b','c','d'}; // array of char's, immutable
 
@@ -219,5 +219,5 @@ PROGRAM -BANK {
 };
 
 // Cycobol uses IBM 370 floating point format, if you don't like that do:
-CALL <IEEE_FLOAT> FROM <STD>
+// CALL <IEEE_FLOAT> FROM <STD>
 
