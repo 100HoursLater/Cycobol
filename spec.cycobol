@@ -175,3 +175,44 @@ IF (account_balance MORE-THAN max_account_balance {
    account_balance ASSIGN 100000.0;
    THROW ERRNO;
 };
+
+// structs / how to bank this shit
+
+PROGRAM -BANK {
+
+ STRUCT vars {
+    INTEGER transfers_lifetime;
+    FLOAT account_balance;
+    FLOAT max_account_balance; 
+    PROCEDURE .account_1() {
+        STRUCT Account_1 {
+            transfers_lifetime;
+            account_balance ASSIGN 100.0;
+            max_account_balance ASSIGN 1000.0;
+        };
+
+    };
+    PROCEDURE .account_2() {
+        STRUCT Account_2 {
+            transfers_lifetime;
+            account_balance ASSIGN 200.0;
+            max_account_balance ASSIGN 10000.0;
+        }
+
+    }
+ };
+
+  PROCEDURE .bank(critical ASSIGN vars) {
+
+    PROCEDURE .transfers() {
+        IF (critical.account_1().Account_1.account_balance TRANSFERS 50.0 TO critical.account_2().Account_2.account_balance) {
+            ON critical.account_1().Account_1.account_balance SUB 50.0; 
+            ON critical.account_2().Account_2.account_balance ADD 50.0;
+
+            ON critical.account_1().Account_1.transfers_lifetime ADD 1;
+        };
+    };
+  };
+
+  RETURN 0;
+};
