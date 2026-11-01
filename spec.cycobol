@@ -1,0 +1,149 @@
+import <io> from <std>; 
+
+PROGRAM -HELLOWORLD {
+    PROCEDURE .main() {
+        IO.PRINT("HelloWorld");
+    };
+
+    RETURN 0; 
+};
+
+// operators
+
+ADD // addition 
+SUB  // subtraction 
+MULTI  // multiply
+DIV // division 
+
+AND // logical AND
+OR // logical OR 
+
+B-AND // bitwise AND
+B-OR // bitwise OR 
+
+. // dot-notation 
+
+-PLUS-PLUS // increment
+
+-MINUS-MINUS // decrement
+
+LESS-THAN // < 
+MORE-THAN // >
+
+LESS-THAN-EQUALS // <=
+MORE-THAN-EQUALS // >=
+
+MODULO // % 
+
+ASSIGN // =
+COMPARE // ==
+
+// IoCyc // Internet of Cycobol 
+
+PROGRAM // Program entry point 
+
+PROCEDURE // Function 
+
+RETURN 0; // Exits Program 
+
+// variables 
+
+INTEGER // 16 Bit integer 
+
+L-INTEGER // 32 Bit intger 
+
+FLOAT // 32 bit float 
+
+DOUBLE // 64 bit float 
+
+CHAR // character 
+
+L-CHAR // long Character
+
+// arrays 
+
+INTEGER my_arr[4] = {1,2,3,4}; // array of 16 bit integers 
+
+L-INTEGER my_l_arr[4] = {1,2,3,4}; // array of 32 bit integers
+
+FLOAT my_f_arr[4] = {1.0,2.0,3.0,4.0}; // array of 32bit floats
+
+DOUBLE my_d_arr[4] = {1.00,2.00,3.00,4.00}; // array of 64bit floats
+
+CHAR my_c_arr[4] = {a,b,c,d}; // array of char's 
+
+L-CHAR my_l_c_arr[4] = {a,b,c,d}; // array of long char's
+
+// immutable variables 
+
+
+CONSTANT INTEGER // 16 Bit integer, immutable
+
+CONSTANT L-INTEGER // 32 Bit intger, immutable
+
+CONSTANT FLOAT // 32 bit float, immutable
+
+CONSTANT DOUBLE // 64 bit float, immutable
+
+CONSTANT CHAR // character, immutable
+
+CONSTANT L-CHAR // long character, immutable
+
+// immutable arrays 
+
+CONSTANT INTEGER my_i_arr[4] = {1,2,3,4}; // array of 16 bit integers, immutable
+
+CONSTANT L-INTEGER my_i_l_arr[4] = {1,2,3,4}; // array of 32 bit integers, immutable
+
+CONSTANT FLOAT my_i_f_arr[4] = {1.0,2.0,3.0,4.0}; // array of 32bit floats, immutable
+
+CONSTANT DOUBLE my_i_d_arr[4] = {1.00,2.00,3.00,4.00}; // array of 64bit floats, immutable
+
+CONSTANT CHAR my_i_c_arr[4] = {a,b,c,d}; // array of char's, immutable
+
+CONSTANT L-CHAR my_i_l_c_arr[4] = {a,b,c,d}; // array of long char's, immutable
+
+// <------------------->
+
+// example of adding 
+
+INTEGER O = 1; 
+INTEGER P = 1; 
+
+O ADD P; // = 2 
+
+// example of subtraction 
+
+INTEGER L = 2; 
+INTEGER Y = 1; 
+
+Y SUB L; // = 1
+
+// <------------------->
+
+// For loops
+
+// new var
+FOR(INTEGER k = 1; k LESS-THAN-EQUALS 100; k-PLUS-PLUS) {
+    // do something
+};
+
+// old var 
+
+FOR(O; O LESS-THAN-EQUALS 100; O-PLUS-PLUS) {
+    // do something
+};
+
+// FizzBuzz
+
+FOR(INTEGER i = 1; i LESS-THAN-EQUALS 100; i-PLUS-PLUS) {
+    IF (i MODULO 15 COMPARE 0) {
+        IO.PRINT("FizzBuzz");
+    } ELSE IF (i MODULO 3 COMPARE 0) {
+        IO.PRINT("Fizz");
+    } ELSE IF (i MODULO 5 COMPARE 0) {
+        IO.PRINT("Buzz");
+    } ELSE {
+        IO.PRINT(i);
+    };
+}; 
