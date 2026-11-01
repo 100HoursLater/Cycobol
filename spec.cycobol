@@ -171,7 +171,6 @@ FLOAT account_balance ASSIGN 100.0;
 FLOAT max_account_balance ASSIGN 100000.0;
 
 IF (account_balance MORE-THAN max_account_balance {
-   THROW ERRNO; 
    IO.ERR("too much monies!");
    account_balance ASSIGN 100000.0;
 };
