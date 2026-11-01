@@ -1,4 +1,4 @@
-import <io> from <std>; 
+CALL <IO> FROM <STD>
 
 PROGRAM -HELLOWORLD {
     PROCEDURE .main() {
@@ -70,9 +70,9 @@ FLOAT my_f_arr[4] = {1.0,2.0,3.0,4.0}; // array of 32bit floats
 
 DOUBLE my_d_arr[4] = {1.00,2.00,3.00,4.00}; // array of 64bit floats
 
-CHAR my_c_arr[4] = {a,b,c,d}; // array of char's 
+CHAR my_c_arr[4] = {'a','b','c','d'}; // array of char's 
 
-L-CHAR my_l_c_arr[4] = {a,b,c,d}; // array of long char's
+L-CHAR my_l_c_arr[4] = {'a','b','c','d'}; // array of long char's
 
 // immutable variables 
 
@@ -99,9 +99,9 @@ CONSTANT FLOAT my_i_f_arr[4] = {1.0,2.0,3.0,4.0}; // array of 32bit floats, immu
 
 CONSTANT DOUBLE my_i_d_arr[4] = {1.00,2.00,3.00,4.00}; // array of 64bit floats, immutable
 
-CONSTANT CHAR my_i_c_arr[4] = {a,b,c,d}; // array of char's, immutable
+CONSTANT CHAR my_c_arr[4] = {'a','b','c','d'}; // array of char's, immutable
 
-CONSTANT L-CHAR my_i_l_c_arr[4] = {a,b,c,d}; // array of long char's, immutable
+CONSTANT L-CHAR my_l_c_arr[4] = {'a','b','c','d'}; // array of long char's, immutable
 
 // <------------------->
 
@@ -110,14 +110,14 @@ CONSTANT L-CHAR my_i_l_c_arr[4] = {a,b,c,d}; // array of long char's, immutable
 INTEGER O = 1; 
 INTEGER P = 1; 
 
-O ADD P; // = 2 
+O ASSIGN O ADD P; // = 2 
 
 // example of subtraction 
 
 INTEGER L = 2; 
 INTEGER Y = 1; 
 
-Y SUB L; // = 1
+Y ASSIGN Y SUB L; // = 1
 
 // <------------------->
 
