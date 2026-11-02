@@ -221,3 +221,11 @@ PROGRAM -BANK {
 // Cycobol uses IBM 370 floating point format, if you don't like that do:
 // CALL <IEEE_FLOAT> FROM <STD>
 
+// the science of ON
+
+ON /*Event*/ {}; // this is an event 
+
+// so as an example
+
+ON someprocedure().somestruct.somevariable ADD 1; // this is an event 
+
