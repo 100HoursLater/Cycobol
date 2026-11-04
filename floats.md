@@ -17,5 +17,5 @@ under IEEE-FLOAT rules:
 `float` -: 32 Bit Float, 
 `double` -: 64 Bit Float
 
-*note: You will have to rebuild the project in order to switch back to the default*
+*note: You would have to rebuild the project in order to switch back to the default*
 -------
