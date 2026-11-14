@@ -59,6 +59,8 @@ FLOAT // 32 bit float, COMP-1
 
 DOUBLE // 64 bit float, COMP-2
 
+DECIMAL();
+
 CHAR // character 
 
 L-CHAR // long Character
@@ -87,6 +89,8 @@ CONSTANT L-INTEGER // 32 Bit intger, immutable
 CONSTANT FLOAT // 32 bit float, immutable, COMP-1
 
 CONSTANT DOUBLE // 64 bit float, immutable, COMP-2
+
+CONSTANT DECIMAL();
 
 CONSTANT CHAR // character, immutable
 
