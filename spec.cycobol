@@ -59,7 +59,7 @@ FLOAT // 32 bit float, COMP-1
 
 DOUBLE // 64 bit float, COMP-2
 
-DECIMAL();
+DECIMAL(/*value*/,/*value*/);
 
 CHAR // character 
 
